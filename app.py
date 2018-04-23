@@ -31,7 +31,7 @@ def api_weight():
     status = f'{weight} Kg'
     if config.last_weight is None:
         status = status + '\n\nFirst Weighing! I am trying to lose weight. Everyday my weight will be posted and if ' \
-                          'my weight loss in not monotonic an insult will accompany it.'
+                          'my weight loss is not monotonically decreasing, an insult will accompany it.'
     elif weight > config.last_weight:
         status = status + '\n\n' + fat_joke()
     try:
